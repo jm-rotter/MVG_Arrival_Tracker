@@ -74,20 +74,23 @@ public class Departure
     [JsonPropertyName("tripCode")]
     public int? tripCode { get; set; }
 
+    public long diff
+    {
+        get
+        {
+            var now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+            
+            return ((this.realtimeDepartureTime ?? 0) - now) / 60000; 
+        }
+    }
 
-    // This property calculates the countdown for the UI
+    
     public string DisplayTime
     {
         get
         {
-            // Current time in Unix Milliseconds
-            var now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-            
-            // DepartureTime is already the "realtime" one based on your JSON
-            var diff = (this.realtimeDepartureTime - now) / 60000; 
-
-            if (diff <= 0) return "Now";
-            return $"{diff} min";
+            if (this.diff <= 0) return "Now";
+            return $"{this.diff} min";
         }
     }
 }

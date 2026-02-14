@@ -33,10 +33,19 @@
                                FontSize="14" 
                                Foreground="#888"/>
                 </StackPanel>
+                <Button Grid.Column="1" 
+                    Content="Start Scroll" 
+                    Name="ScrollButton"
+                    Click="ToggleScroll_Click"
+                    Background="#333"
+                    Foreground="White"
+                    Padding="10,5"
+                    VerticalAlignment="Center"/>
             </Grid>
         </Border>
 
-        <ListBox Grid.Row="1" 
+        <ListBox x:Name="ArrivalList" 
+                 Grid.Row="1" 
                  ItemsSource="{Binding Departures}" 
                  Background="Transparent" 
                  Margin="10"

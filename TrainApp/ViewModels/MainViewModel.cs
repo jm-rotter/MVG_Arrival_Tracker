@@ -26,7 +26,8 @@ public partial class MainViewModel : ObservableObject
         while (true)
         {
             var results = await _mvgService.GetDeparturesAsync();
-            
+            results = _mvgService.filterDepartures(results); 
+        
             Dispatcher.UIThread.Post(() =>
             {
                 Departures.Clear();

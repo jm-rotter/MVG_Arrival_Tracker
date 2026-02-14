@@ -13,10 +13,11 @@ using TrainApp.Models;
 namespace TrainApp.Services;
 
 public class MVG_Services
+
 {
     private readonly HttpClient _httpClient = new();
     private string _TargetStation = "Studentenstadt"; 
-    private string? _cachedStationId;
+    private string? _cachedStationId = "de:09162:540";
 
     public MVG_Services() {
     }
@@ -42,6 +43,16 @@ public class MVG_Services
         }
     }
 
+public List<Departure> filterDepartures(List<Departure> departures)
+{
+    long l_threshold = 5; //Nothing under 6 will be shown
+    long h_threshold = 30; 
+    return departures
+            .Where(d => d.cancelled == false)
+            .Where(d => d.diff > l_threshold && d.diff < h_threshold)
+            .ToList();
+}
+
  public async Task<List<Departure>> GetDeparturesAsync()
     {
         try
@@ -58,13 +69,11 @@ public class MVG_Services
             }
 
             var url = "https://www.mvg.de/api/bgw-pt/v3/departures?globalId=" + _cachedStationId;
-            Console.WriteLine($"DEBUG: Fetching from: {url}");
 
             var response = await _httpClient.GetFromJsonAsync<List<Departure>>(url);
 
             if (response != null)
             {
-                Console.WriteLine($"DEBUG: API Success! Found {response.Count} departures.");
                 return response;
             }
 
