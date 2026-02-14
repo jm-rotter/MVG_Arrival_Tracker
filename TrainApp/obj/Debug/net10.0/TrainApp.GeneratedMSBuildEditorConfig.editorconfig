@@ -33,3 +33,12 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/home/rotj/side_projects/trains/MVG_Arrival_Tracker/TrainApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/rotj/side_projects/trains/MVG_Arrival_Tracker/TrainApp/Views/TrainView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/rotj/side_projects/trains/MVG_Arrival_Tracker/TrainApp/Views/WeatherView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/rotj/side_projects/trains/MVG_Arrival_Tracker/TrainApp/Views/WisdomView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

@@ -1,0 +1,62 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             xmlns:vm="using:TrainApp.ViewModels"
+             x:Class="TrainApp.Views.WeatherView"
+             x:DataType="vm:WeatherViewModel">
+
+    <Border Background="#1a1a1a" 
+            CornerRadius="12" 
+            ClipToBounds="True" 
+            BorderBrush="#333" 
+            BorderThickness="1">
+        <Grid>
+            <Image asyncImageLoader:ImageLoader.Source="{Binding MapUrl}" 
+                   Stretch="UniformToFill" 
+                   Opacity="0.95"/>
+
+            <Border>
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0%,100%" EndPoint="0%,0%">
+                        <GradientStop Offset="0" Color="#1a1a1a" />
+                        <GradientStop Offset="0.1" Color="#CC1a1a1a" />
+                        <GradientStop Offset="1" Color="Transparent" />
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <TextBlock Text="{Binding LocationName}" 
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="15,12"
+                       FontSize="11" 
+                       FontWeight="SemiBold" 
+                       Foreground="#ccc" 
+                       LetterSpacing="2"/>
+
+            <StackPanel VerticalAlignment="Bottom" Margin="15">
+                
+                <TextBlock Text="MUNICH" 
+                           FontSize="10" 
+                           FontWeight="Bold" 
+                           Foreground="#888" 
+                           LetterSpacing="1"/>
+                
+                <Grid ColumnDefinitions="Auto, *">
+                    <TextBlock Grid.Column="0" 
+                               Text="{Binding CurrentTemp}" 
+                               FontSize="32" 
+                               FontWeight="Bold" 
+                               Foreground="White"/>
+                    
+                    <TextBlock Grid.Column="1" 
+                               Text="{Binding WeatherDescription}" 
+                               FontSize="12" 
+                               Foreground="#aaa" 
+                               VerticalAlignment="Center" 
+                               Margin="10,5,0,0"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
