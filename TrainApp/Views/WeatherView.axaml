@@ -30,8 +30,8 @@
                        HorizontalAlignment="Left"
                        Margin="15,12"
                        FontSize="11" 
-                       FontWeight="SemiBold" 
-                       Foreground="#ccc" 
+                       FontWeight="Bold" 
+                       Foreground="#000000" 
                        LetterSpacing="2"/>
 
             <StackPanel VerticalAlignment="Bottom" Margin="15">
