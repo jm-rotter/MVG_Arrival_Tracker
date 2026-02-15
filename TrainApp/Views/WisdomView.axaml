@@ -36,13 +36,6 @@
                            HorizontalAlignment="Left"
                            LineHeight="26"/>
             </ScrollViewer>
-
-            <TextBlock Grid.Row="2" 
-                       Text="Updates every 30m" 
-                       FontSize="10" 
-                       Foreground="#444" 
-                       HorizontalAlignment="Right"
-                       Margin="0,15,0,0"/>
         </Grid>
     </Border>
 </UserControl>

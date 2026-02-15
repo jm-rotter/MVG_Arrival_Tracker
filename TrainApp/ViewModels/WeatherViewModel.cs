@@ -42,7 +42,7 @@ namespace TrainApp.ViewModels
 
                 await UpdateTravelImageAsync();
 
-                await Task.Delay(TimeSpan.FromMinutes(15));
+                await Task.Delay(TimeSpan.FromMinutes(1.5));
             }
         }
 

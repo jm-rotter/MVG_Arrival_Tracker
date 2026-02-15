@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "euGeH9VBMKc=",
+  "dgSpecHash": "vM/bD3gGDrc=",
   "success": true,
   "projectFilePath": "/home/rotj/side_projects/trains/MVG_Arrival_Tracker/TrainApp/TrainApp.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,10 @@
     "/home/rotj/.nuget/packages/skiasharp.nativeassets.macos/2.88.9/skiasharp.nativeassets.macos.2.88.9.nupkg.sha512",
     "/home/rotj/.nuget/packages/skiasharp.nativeassets.webassembly/2.88.9/skiasharp.nativeassets.webassembly.2.88.9.nupkg.sha512",
     "/home/rotj/.nuget/packages/skiasharp.nativeassets.win32/2.88.9/skiasharp.nativeassets.win32.2.88.9.nupkg.sha512",
-    "/home/rotj/.nuget/packages/tmds.dbus.protocol/0.21.2/tmds.dbus.protocol.0.21.2.nupkg.sha512"
+    "/home/rotj/.nuget/packages/tmds.dbus.protocol/0.21.2/tmds.dbus.protocol.0.21.2.nupkg.sha512",
+    "/home/rotj/.nuget/packages/microsoft.netcore.app.runtime.linux-arm64/10.0.3/microsoft.netcore.app.runtime.linux-arm64.10.0.3.nupkg.sha512",
+    "/home/rotj/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-arm64/10.0.3/microsoft.aspnetcore.app.runtime.linux-arm64.10.0.3.nupkg.sha512",
+    "/home/rotj/.nuget/packages/microsoft.netcore.app.host.linux-arm64/10.0.3/microsoft.netcore.app.host.linux-arm64.10.0.3.nupkg.sha512"
   ],
   "logs": []
 }

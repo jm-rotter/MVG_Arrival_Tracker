@@ -26,7 +26,7 @@ namespace TrainApp.ViewModels
             {
                 var newWisdom = await _wisdomService.GetRandomWisdomAsync();
                 Dispatcher.UIThread.Post(() => WisdomText = newWisdom);
-                await Task.Delay(TimeSpan.FromMinutes(30));
+                await Task.Delay(TimeSpan.FromMinutes(1.5));
             }
         }
 
