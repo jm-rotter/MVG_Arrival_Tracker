@@ -7,7 +7,8 @@
         Width="1024" Height="600"
         WindowStartupLocation="CenterScreen"
         xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
-        ExtendClientAreaToDecorationsHint="True"> 
+        ExtendClientAreaToDecorationsHint="True"
+        SystemDecorations= "None"> 
         
     <Grid ColumnDefinitions="*, 450">                
         <Border Grid.Column="0" Margin="15" Background="#121212" CornerRadius="12">
