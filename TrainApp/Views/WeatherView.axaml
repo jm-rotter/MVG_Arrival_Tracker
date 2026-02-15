@@ -25,14 +25,18 @@
                 </Border.Background>
             </Border>
 
-            <TextBlock Text="{Binding LocationName}" 
-                       VerticalAlignment="Top"
-                       HorizontalAlignment="Left"
-                       Margin="15,12"
-                       FontSize="11" 
-                       FontWeight="Bold" 
-                       Foreground="#000000" 
-                       LetterSpacing="2"/>
+            <Border Background="#84000000" 
+                    CornerRadius="4" 
+                    Padding="8,4" 
+                    Margin="15,12"
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Top">
+                <TextBlock Text="{Binding LocationName}" 
+                        FontSize="11" 
+                        FontWeight="Bold" 
+                        Foreground="White" 
+                        LetterSpacing="2"/>
+            </Border>
 
             <StackPanel VerticalAlignment="Bottom" Margin="15">
                 

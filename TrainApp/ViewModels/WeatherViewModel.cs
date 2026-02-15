@@ -17,7 +17,7 @@ namespace TrainApp.ViewModels
         private readonly WeatherService _weatherService = new();
         private readonly HttpClient _httpClient = new();
         
-        private const string UnsplashAccessKey = "0-Ufv0neYx44ajZl_CMRRsfDmT2CXje4Ai9ENiVTnmI";
+        private const string UnsplashAccessKey = "Nk6BhKXE5CSnQUuiP4k8AVpDpmtQj4_k524OG9EcSYk";
 
         public WeatherViewModel()
         {
