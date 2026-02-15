@@ -30,4 +30,4 @@ export DISPLAY=:0;cd ~/App_Deployed/;nohup ./TrainApp &
 
 ## Preview 
 
-![Example Layout](./Example.png) 
+![Example Layout](./example.png) 
