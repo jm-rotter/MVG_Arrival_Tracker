@@ -9,19 +9,25 @@ namespace TrainApp.Services
     {
         private readonly HttpClient _client = new();
 
-        public async Task<string> GetRandomWisdomAsync()
+        public async Task<(string quote,string author)> GetRandomWisdomAsync()
         {
             try
             {
-                var url = "https://evilinsult.com/generate_insult.php?lang=en&type=json";
+                var url = "https://zenquotes.io/api/random?";
                 var json = await _client.GetStringAsync(url);
                 
                 using var doc = JsonDocument.Parse(json);
-                var rawInsult = doc.RootElement.GetProperty("insult").GetString() ?? "";
+                var root = doc.RootElement[0];
 
-                return WebUtility.HtmlDecode(rawInsult);
+                var quote = root.GetProperty("q").GetString() ?? "No wisdom found.";
+                var author = root.GetProperty("a").GetString() ?? "Unknown";
+
+                return (WebUtility.HtmlDecode(quote), author);
             }
-            catch { return "Even the API is tired of looking at you."; }
+            catch 
+            { 
+                return ("The only true wisdom is in knowing you know nothing.", "Socrates"); 
+            }
         }
     }
 }
